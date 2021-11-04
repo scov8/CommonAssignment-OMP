@@ -1,0 +1,14 @@
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/rebuild_cache.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/test.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/generate_measures.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_seq_O0.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/docs.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_seq_O2.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_seq_O3.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/extract_measures.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/install_pipenv.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_seq_O1.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_O2.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/edit_cache.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_O3.dir
+/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/program_O1.dir
