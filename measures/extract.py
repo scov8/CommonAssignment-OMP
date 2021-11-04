@@ -1,23 +1,16 @@
-# 
+#
 # Course: High Performance Computing 2021/2022
-# 
+#
 # Lecturer: Francesco Moscato	fmoscato@unisa.it
 #
 # Group:
-# Rosa Gerardo	     0622701829	 g.rosa10@studenti.unisa.it               
-# Scovotto Luigi    0622701702  l.scovotto1@studenti.unisa.it 
-# Tortora Francesco 0622701700  f.tortora21@studenti.unisa.it
+# Rosa Gerardo	     0622701829	 g.rosa10@studenti.unisa.it
+# Scovotto Luigi     0622701702  l.scovotto1@studenti.unisa.it
+# Tortora Francesco  0622701700  f.tortora21@studenti.unisa.it
 #
 # Copyright (C) 2021 - All Rights Reserved
 #
 # This file is part of CommonAssignment1.
-#
-# Requirements: Parallelize and Evaluate Performances of "COUNTING SORT" Algorithm ,by using OpenMP.
-# 
-# The previous year's group 02 files proposed by the professor during the course were used for file generation and extraction.
-#  
-# The counting sort function was taken here:
-# https://github.com/ianliu/programacao-paralela/blob/master/omp-count-sort/main.c
 #
 # CommonAssignment1 is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -194,7 +187,7 @@ def extraction(
             cell = []
             splitted_filename = filename_key.split("-")
             if "NTH-00" in filename_key:
-                # = means[filename_key]["elapsed"]
+                seq = means[filename_key]["elapsed"]
                 nt = 1
                 cell.append("Serial")
                 cell.append(nt)
