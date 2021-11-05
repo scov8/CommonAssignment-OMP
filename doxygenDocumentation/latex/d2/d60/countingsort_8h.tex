@@ -1,0 +1,83 @@
+\hypertarget{countingsort_8h}{}\doxysection{include/countingsort.h File Reference}
+\label{countingsort_8h}\index{include/countingsort.h@{include/countingsort.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for countingsort.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d1/d45/countingsort_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{da/d3e/countingsort_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{countingsort_8h_a1049bdd2068c9b423d555aadedeb7d68}{STARTTIME}}(id)
+\item 
+\#define \mbox{\hyperlink{countingsort_8h_a947f627df742c175b26fdd92c0f819fb}{ENDTIME}}(id,  x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{countingsort_8h_abbdd8e901a01c62d752a3dcaff5c7c89}{generate\+Array}} (ELEMENT\+\_\+\+TYPE $\ast$, int, int)
+\item 
+void \mbox{\hyperlink{countingsort_8h_a975a8d6bdeb955f112e6ed2b1a6d2d7f}{count\+Sort}} (ELEMENT\+\_\+\+TYPE $\ast$, int, int)
+\item 
+void \mbox{\hyperlink{countingsort_8h_a34920556a9efac5f20a6e8337cdd075a}{count\+Sort\+On}} (ELEMENT\+\_\+\+TYPE $\ast$, ELEMENT\+\_\+\+TYPE $\ast$, int, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{countingsort_8h_a947f627df742c175b26fdd92c0f819fb}\label{countingsort_8h_a947f627df742c175b26fdd92c0f819fb}} 
+\index{countingsort.h@{countingsort.h}!ENDTIME@{ENDTIME}}
+\index{ENDTIME@{ENDTIME}!countingsort.h@{countingsort.h}}
+\doxysubsubsection{\texorpdfstring{ENDTIME}{ENDTIME}}
+{\footnotesize\ttfamily \#define ENDTIME(\begin{DoxyParamCaption}\item[{}]{id,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  end\_time\_42\_\#\#\textcolor{keywordtype}{id} = clock(); \(\backslash\)}
+\DoxyCodeLine{  x = ((double)(end\_time\_42\_\#\#\textcolor{keywordtype}{id} -\/ start\_time\_42\_\#\#\textcolor{keywordtype}{id})) / CLOCKS\_PER\_SEC}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{countingsort_8h_a1049bdd2068c9b423d555aadedeb7d68}\label{countingsort_8h_a1049bdd2068c9b423d555aadedeb7d68}} 
+\index{countingsort.h@{countingsort.h}!STARTTIME@{STARTTIME}}
+\index{STARTTIME@{STARTTIME}!countingsort.h@{countingsort.h}}
+\doxysubsubsection{\texorpdfstring{STARTTIME}{STARTTIME}}
+{\footnotesize\ttfamily \#define STARTTIME(\begin{DoxyParamCaption}\item[{}]{id }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  clock\_t start\_time\_42\_\#\#id, end\_time\_42\_\#\#id; \(\backslash\)}
+\DoxyCodeLine{  start\_time\_42\_\#\#\textcolor{keywordtype}{id} = clock()}
+
+\end{DoxyCode}
+macros to get execution time\+: both macros have to be in the same scope define a double variable to use in ENDTIME before STARTTIME\+: double x; the variable will hold the execution time in seconds. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{countingsort_8h_a975a8d6bdeb955f112e6ed2b1a6d2d7f}\label{countingsort_8h_a975a8d6bdeb955f112e6ed2b1a6d2d7f}} 
+\index{countingsort.h@{countingsort.h}!countSort@{countSort}}
+\index{countSort@{countSort}!countingsort.h@{countingsort.h}}
+\doxysubsubsection{\texorpdfstring{countSort()}{countSort()}}
+{\footnotesize\ttfamily void count\+Sort (\begin{DoxyParamCaption}\item[{ELEMENT\+\_\+\+TYPE $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{countingsort_8h_a34920556a9efac5f20a6e8337cdd075a}\label{countingsort_8h_a34920556a9efac5f20a6e8337cdd075a}} 
+\index{countingsort.h@{countingsort.h}!countSortOn@{countSortOn}}
+\index{countSortOn@{countSortOn}!countingsort.h@{countingsort.h}}
+\doxysubsubsection{\texorpdfstring{countSortOn()}{countSortOn()}}
+{\footnotesize\ttfamily void count\+Sort\+On (\begin{DoxyParamCaption}\item[{ELEMENT\+\_\+\+TYPE $\ast$}]{,  }\item[{ELEMENT\+\_\+\+TYPE $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{countingsort_8h_abbdd8e901a01c62d752a3dcaff5c7c89}\label{countingsort_8h_abbdd8e901a01c62d752a3dcaff5c7c89}} 
+\index{countingsort.h@{countingsort.h}!generateArray@{generateArray}}
+\index{generateArray@{generateArray}!countingsort.h@{countingsort.h}}
+\doxysubsubsection{\texorpdfstring{generateArray()}{generateArray()}}
+{\footnotesize\ttfamily void generate\+Array (\begin{DoxyParamCaption}\item[{ELEMENT\+\_\+\+TYPE $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
