@@ -44,7 +44,7 @@
 #ifdef _OPENMP
 #include <omp.h>
 #else
-#define get_thread_num() 0
+#define omp_get_thread_num() 0
 #endif
 
 /**
@@ -55,7 +55,7 @@
  */
 void generateArray(ELEMENT_TYPE a[], int n, int threads)
 {
-    unsigned int seed = time(NULL);
+    unsigned int seed = time(NULL) * omp_get_thread_num();
 #pragma omp parallel num_threads(threads) shared(a, n, seed)
     {
 #pragma omp for
@@ -67,7 +67,7 @@ void generateArray(ELEMENT_TYPE a[], int n, int threads)
 }
 
 /**
- * @brief This function sorts an array according to the counting sort algorithm using optimized loops using optimized for loop.
+ * @brief This function sorts an array according to the counting sort algorithm using optimized loops, the complexity is O(n^2).
  * @param a          a pointer to an array which must be sorted.
  * @param n          size of a.
  * @param threads    number of threads.
@@ -95,4 +95,44 @@ void countSort(ELEMENT_TYPE a[], int n, int threads)
     for (i = 0; i < n; i++)
         memcpy(a + i, temp + i, sizeof(ELEMENT_TYPE));
     free(temp);
+}
+
+/**
+ * @brief This function sorts an array according to the counting sort algorithm using optimized loops, the complexity is O(n).
+ * @param A          a pointer to an array which must be sorted.
+ * @param C          a pointer to a result array.
+ * @param length     size of input array (A).
+ * @param threads    number of threads.
+ */
+void countSortOn(int A[], int C[], int length, int threads)
+{
+    int max = A[0];
+    int min = A[0];
+    for (int i = 0; i < length; i++)
+    {
+        if (A[i] > max)
+            max = A[i];
+        else if (A[i] < min)
+            min = A[i];
+    }
+    int range = max - min + 1;
+    ELEMENT_TYPE *B = (ELEMENT_TYPE *)calloc(range + 1, sizeof(ELEMENT_TYPE));
+
+#pragma omp parallel for shared(A, length, range) num_threads(threads) reduction(+ \
+                                                                                 : B[:range])
+    for (int i = 0; i < length; i++)
+        B[A[i] - min] += 1;
+
+#pragma omp single
+    {
+        for (int i = 1; i < range; i++)
+            B[i] += B[i - 1];
+
+        for (int i = length - 1; i >= 0; i--)
+        {
+            C[B[A[i] - min] - 1] = A[i];
+            B[A[i] - min]--;
+        }
+        free(B);
+    }
 }

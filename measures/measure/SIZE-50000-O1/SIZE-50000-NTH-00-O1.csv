@@ -1,0 +1,2 @@
+dimarray,threads,init,countingsort,user,elapsed,sys,pCPU
+50000,0,0.000583,3.579294,3.542,3.921,0.040,91.35

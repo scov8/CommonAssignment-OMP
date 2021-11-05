@@ -1,4 +1,4 @@
-# Install script for directory: /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+# Install script for directory: /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -55,5 +55,6 @@
 
 void generateArray(ELEMENT_TYPE *, int, int);
 void countSort(ELEMENT_TYPE *, int, int);
+void countSortOn(ELEMENT_TYPE *, ELEMENT_TYPE *, int, int);
 
 #endif

@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 # Utility rule file for extract_measures.
 
@@ -67,8 +67,8 @@ include CMakeFiles/extract_measures.dir/compiler_depend.make
 include CMakeFiles/extract_measures.dir/progress.make
 
 CMakeFiles/extract_measures: ../measures/extract.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating version header [/usr/local/bin/pipenv run python /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/measures/extract.py]"
-	PIPENV_PIPFILE=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/Pipfile /usr/local/bin/pipenv run python /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/measures/extract.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating version header [/usr/local/bin/pipenv run python /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/measures/extract.py]"
+	PIPENV_PIPFILE=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/Pipfile /usr/local/bin/pipenv run python /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/measures/extract.py
 
 extract_measures: CMakeFiles/extract_measures
 extract_measures: CMakeFiles/extract_measures.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/extract_measures.dir/clean:
 .PHONY : CMakeFiles/extract_measures.dir/clean
 
 CMakeFiles/extract_measures.dir/depend:
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/extract_measures.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles/extract_measures.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/extract_measures.dir/depend
 

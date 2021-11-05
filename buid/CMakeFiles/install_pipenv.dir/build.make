@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 # Utility rule file for install_pipenv.
 
@@ -67,8 +67,8 @@ include CMakeFiles/install_pipenv.dir/compiler_depend.make
 include CMakeFiles/install_pipenv.dir/progress.make
 
 CMakeFiles/install_pipenv: ../Pipfile.lock
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Installing pipenv dependencies [/usr/local/bin/pipenv install]"
-	PIPENV_PIPFILE=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/Pipfile /usr/local/bin/pipenv install --ignore-pipfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Installing pipenv dependencies [/usr/local/bin/pipenv install]"
+	PIPENV_PIPFILE=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/Pipfile /usr/local/bin/pipenv install --ignore-pipfile
 
 install_pipenv: CMakeFiles/install_pipenv
 install_pipenv: CMakeFiles/install_pipenv.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/install_pipenv.dir/clean:
 .PHONY : CMakeFiles/install_pipenv.dir/clean
 
 CMakeFiles/install_pipenv.dir/depend:
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/install_pipenv.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles/install_pipenv.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/install_pipenv.dir/depend
 

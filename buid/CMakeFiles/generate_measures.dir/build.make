@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 # Utility rule file for generate_measures.
 
@@ -73,8 +73,8 @@ CMakeFiles/generate_measures: program_seq_O0
 CMakeFiles/generate_measures: program_seq_O1
 CMakeFiles/generate_measures: program_seq_O2
 CMakeFiles/generate_measures: program_seq_O3
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating measures [/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid]"
-	../measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating measures [/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid]"
+	../measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 generate_measures: CMakeFiles/generate_measures
 generate_measures: CMakeFiles/generate_measures.dir/build.make
@@ -89,6 +89,6 @@ CMakeFiles/generate_measures.dir/clean:
 .PHONY : CMakeFiles/generate_measures.dir/clean
 
 CMakeFiles/generate_measures.dir/depend:
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/generate_measures.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles/generate_measures.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/generate_measures.dir/depend
 

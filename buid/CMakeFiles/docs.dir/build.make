@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 # Utility rule file for docs.
 
@@ -69,9 +69,9 @@ include CMakeFiles/docs.dir/progress.make
 CMakeFiles/docs: Doxyfile.docs
 CMakeFiles/docs: ../src/countingsort.c
 CMakeFiles/docs: ../include/countingsort.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generate API documentation for docs"
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO && /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E make_directory /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO && /usr/local/bin/doxygen /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/Doxyfile.docs
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generate API documentation for docs"
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 && /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E make_directory /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 && /usr/local/bin/doxygen /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/Doxyfile.docs
 
 docs: CMakeFiles/docs
 docs: CMakeFiles/docs.dir/build.make
@@ -86,6 +86,6 @@ CMakeFiles/docs.dir/clean:
 .PHONY : CMakeFiles/docs.dir/clean
 
 CMakeFiles/docs.dir/depend:
-	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles/docs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02 /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles/docs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/docs.dir/depend
 

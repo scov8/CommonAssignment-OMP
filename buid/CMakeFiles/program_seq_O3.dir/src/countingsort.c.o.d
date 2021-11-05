@@ -1,5 +1,5 @@
 CMakeFiles/program_seq_O3.dir/src/countingsort.c.o: \
-  /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/src/countingsort.c \
+  /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/src/countingsort.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/sys/cdefs.h \
@@ -83,4 +83,4 @@ CMakeFiles/program_seq_O3.dir/src/countingsort.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/secure/_string.h \
-  /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/include/countingsort.h
+  /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/include/countingsort.h

@@ -58,11 +58,33 @@ target_include_directories(program_seq_O1 PRIVATE include)
 target_include_directories(program_seq_O2 PRIVATE include)
 target_include_directories(program_seq_O3 PRIVATE include)
 
+# ------------------------- for second algoritm ---------------
+add_executable(programOn_O1 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_O2 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_O3 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_seq_O0 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_seq_O1 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_seq_O2 src/mainOn.c src/countingsort.c include/countingsort.h)
+add_executable(programOn_seq_O3 src/mainOn.c src/countingsort.c include/countingsort.h)
+
+target_include_directories(programOn_O1 PRIVATE include)
+target_include_directories(programOn_O2 PRIVATE include)
+target_include_directories(programOn_O3 PRIVATE include)
+target_include_directories(programOn_seq_O0 PRIVATE include)
+target_include_directories(programOn_seq_O1 PRIVATE include)
+target_include_directories(programOn_seq_O2 PRIVATE include)
+target_include_directories(programOn_seq_O3 PRIVATE include)
+
 find_package(OpenMP)
 if(OpenMP_C_FOUND)
         target_link_libraries(program_O1 PRIVATE OpenMP::OpenMP_C)
         target_link_libraries(program_O2 PRIVATE OpenMP::OpenMP_C)
         target_link_libraries(program_O3 PRIVATE OpenMP::OpenMP_C)
+
+# ------------------------- for second algoritm ---------------
+		target_link_libraries(programOn_O1 PRIVATE OpenMP::OpenMP_C)
+        target_link_libraries(programOn_O2 PRIVATE OpenMP::OpenMP_C)
+        target_link_libraries(programOn_O3 PRIVATE OpenMP::OpenMP_C)
 endif()
 
 target_compile_options(program_O1 PRIVATE -O1)
@@ -82,7 +104,25 @@ target_compile_features(program_seq_O2 PRIVATE c_std_11)
 target_compile_features(program_seq_O3 PRIVATE c_std_11)
 
 
-set(ELEMENT_TYPE double CACHE STRING "Type of the elements in array.")
+# ------------------------- for second algoritm ---------------
+target_compile_options(programOn_O1 PRIVATE -O1)
+target_compile_options(programOn_O2 PRIVATE -O2)
+target_compile_options(programOn_O3 PRIVATE -O3)
+target_compile_options(programOn_seq_O0 PRIVATE -O0)
+target_compile_options(programOn_seq_O1 PRIVATE -O1)
+target_compile_options(programOn_seq_O2 PRIVATE -O2)
+target_compile_options(programOn_seq_O3 PRIVATE -O3)
+
+target_compile_features(programOn_O1 PRIVATE c_std_11)
+target_compile_features(programOn_O2 PRIVATE c_std_11)
+target_compile_features(programOn_O3 PRIVATE c_std_11)
+target_compile_features(programOn_seq_O0 PRIVATE c_std_11)
+target_compile_features(programOn_seq_O1 PRIVATE c_std_11)
+target_compile_features(programOn_seq_O2 PRIVATE c_std_11)
+target_compile_features(programOn_seq_O3 PRIVATE c_std_11)
+
+
+set(ELEMENT_TYPE int CACHE STRING "Type of the elements in array.")
 target_compile_definitions(program_O1 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
 target_compile_definitions(program_O2 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
 target_compile_definitions(program_O3 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
@@ -90,6 +130,14 @@ target_compile_definitions(program_seq_O0 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE}
 target_compile_definitions(program_seq_O1 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
 target_compile_definitions(program_seq_O2 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
 target_compile_definitions(program_seq_O3 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+# ------------------------- for second algoritm ---------------
+target_compile_definitions(programOn_O1 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_O2 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_O3 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_seq_O0 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_seq_O1 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_seq_O2 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
+target_compile_definitions(programOn_seq_O3 PRIVATE -DELEMENT_TYPE=${ELEMENT_TYPE})
 
 # ------------------------------------ DOCUMENTATION ------------------------------------
 find_package(Doxygen
@@ -119,6 +167,20 @@ add_custom_target(
 		program_seq_O3
 )
 
+add_custom_target(
+	 generate_measuresOn
+	 COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash -k ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Generating measures [${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash -k ${CMAKE_CURRENT_BINARY_DIR}]"
+    DEPENDS	
+		programOn_O1
+		programOn_O2
+		programOn_O3
+		programOn_seq_O0
+		programOn_seq_O1
+		programOn_seq_O2
+		programOn_seq_O3
+)
+
 # --------------------------------- MEASURES EXTRACTION ---------------------------------
 find_package(Python3 COMPONENTS Interpreter REQUIRED)
 find_program(PipEnv pipenv REQUIRED)
@@ -139,3 +201,11 @@ add_custom_target(
 		${CMAKE_CURRENT_SOURCE_DIR}/measures/extract.py
 )
 
+add_custom_target(
+    extract_measuresOn
+    COMMAND PIPENV_PIPFILE=${CMAKE_CURRENT_SOURCE_DIR}/Pipfile ${PipEnv} run python ${CMAKE_CURRENT_SOURCE_DIR}/measures/extractOn.py
+    COMMENT "Generating version header [${PipEnv} run python ${CMAKE_CURRENT_SOURCE_DIR}/measures/extractOn.py]"
+    DEPENDS	
+		install_pipenv
+		${CMAKE_CURRENT_SOURCE_DIR}/measures/extractOn.py
+)

@@ -57,23 +57,13 @@ RM = /usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO
+CMAKE_SOURCE_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid
+CMAKE_BINARY_DIR = /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -84,6 +74,16 @@ test:
 # Special rule for the target test
 test/fast: test
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,9 +97,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luigiscovotto/Desktop/proveMidterm/HPC/GRUPPO/buid/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,82 +127,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named generate_measures
+# Target rules for targets named extract_measuresOn
 
 # Build rule for target.
-generate_measures: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_measures
-.PHONY : generate_measures
+extract_measuresOn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extract_measuresOn
+.PHONY : extract_measuresOn
 
 # fast build rule for target.
-generate_measures/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measures.dir/build.make CMakeFiles/generate_measures.dir/build
-.PHONY : generate_measures/fast
-
-#=============================================================================
-# Target rules for targets named program_seq_O0
-
-# Build rule for target.
-program_seq_O0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O0
-.PHONY : program_seq_O0
-
-# fast build rule for target.
-program_seq_O0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/build
-.PHONY : program_seq_O0/fast
-
-#=============================================================================
-# Target rules for targets named docs
-
-# Build rule for target.
-docs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs
-.PHONY : docs
-
-# fast build rule for target.
-docs/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
-.PHONY : docs/fast
-
-#=============================================================================
-# Target rules for targets named program_seq_O2
-
-# Build rule for target.
-program_seq_O2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O2
-.PHONY : program_seq_O2
-
-# fast build rule for target.
-program_seq_O2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/build
-.PHONY : program_seq_O2/fast
-
-#=============================================================================
-# Target rules for targets named program_seq_O3
-
-# Build rule for target.
-program_seq_O3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O3
-.PHONY : program_seq_O3
-
-# fast build rule for target.
-program_seq_O3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/build
-.PHONY : program_seq_O3/fast
-
-#=============================================================================
-# Target rules for targets named extract_measures
-
-# Build rule for target.
-extract_measures: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extract_measures
-.PHONY : extract_measures
-
-# fast build rule for target.
-extract_measures/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/extract_measures.dir/build.make CMakeFiles/extract_measures.dir/build
-.PHONY : extract_measures/fast
+extract_measuresOn/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extract_measuresOn.dir/build.make CMakeFiles/extract_measuresOn.dir/build
+.PHONY : extract_measuresOn/fast
 
 #=============================================================================
 # Target rules for targets named install_pipenv
@@ -218,17 +153,95 @@ install_pipenv/fast:
 .PHONY : install_pipenv/fast
 
 #=============================================================================
-# Target rules for targets named program_seq_O1
+# Target rules for targets named programOn_seq_O3
 
 # Build rule for target.
-program_seq_O1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O1
-.PHONY : program_seq_O1
+programOn_seq_O3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_seq_O3
+.PHONY : programOn_seq_O3
 
 # fast build rule for target.
-program_seq_O1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/build
-.PHONY : program_seq_O1/fast
+programOn_seq_O3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/build
+.PHONY : programOn_seq_O3/fast
+
+#=============================================================================
+# Target rules for targets named programOn_seq_O2
+
+# Build rule for target.
+programOn_seq_O2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_seq_O2
+.PHONY : programOn_seq_O2
+
+# fast build rule for target.
+programOn_seq_O2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/build
+.PHONY : programOn_seq_O2/fast
+
+#=============================================================================
+# Target rules for targets named programOn_seq_O0
+
+# Build rule for target.
+programOn_seq_O0: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_seq_O0
+.PHONY : programOn_seq_O0
+
+# fast build rule for target.
+programOn_seq_O0/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/build
+.PHONY : programOn_seq_O0/fast
+
+#=============================================================================
+# Target rules for targets named generate_measuresOn
+
+# Build rule for target.
+generate_measuresOn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_measuresOn
+.PHONY : generate_measuresOn
+
+# fast build rule for target.
+generate_measuresOn/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measuresOn.dir/build.make CMakeFiles/generate_measuresOn.dir/build
+.PHONY : generate_measuresOn/fast
+
+#=============================================================================
+# Target rules for targets named programOn_O3
+
+# Build rule for target.
+programOn_O3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_O3
+.PHONY : programOn_O3
+
+# fast build rule for target.
+programOn_O3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/build
+.PHONY : programOn_O3/fast
+
+#=============================================================================
+# Target rules for targets named programOn_O2
+
+# Build rule for target.
+programOn_O2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_O2
+.PHONY : programOn_O2
+
+# fast build rule for target.
+programOn_O2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/build
+.PHONY : programOn_O2/fast
+
+#=============================================================================
+# Target rules for targets named program_seq_O2
+
+# Build rule for target.
+program_seq_O2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O2
+.PHONY : program_seq_O2
+
+# fast build rule for target.
+program_seq_O2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/build
+.PHONY : program_seq_O2/fast
 
 #=============================================================================
 # Target rules for targets named program_O2
@@ -242,6 +255,110 @@ program_O2: cmake_check_build_system
 program_O2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/build
 .PHONY : program_O2/fast
+
+#=============================================================================
+# Target rules for targets named program_seq_O1
+
+# Build rule for target.
+program_seq_O1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O1
+.PHONY : program_seq_O1
+
+# fast build rule for target.
+program_seq_O1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/build
+.PHONY : program_seq_O1/fast
+
+#=============================================================================
+# Target rules for targets named extract_measures
+
+# Build rule for target.
+extract_measures: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extract_measures
+.PHONY : extract_measures
+
+# fast build rule for target.
+extract_measures/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extract_measures.dir/build.make CMakeFiles/extract_measures.dir/build
+.PHONY : extract_measures/fast
+
+#=============================================================================
+# Target rules for targets named programOn_seq_O1
+
+# Build rule for target.
+programOn_seq_O1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_seq_O1
+.PHONY : programOn_seq_O1
+
+# fast build rule for target.
+programOn_seq_O1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/build
+.PHONY : programOn_seq_O1/fast
+
+#=============================================================================
+# Target rules for targets named program_seq_O3
+
+# Build rule for target.
+program_seq_O3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O3
+.PHONY : program_seq_O3
+
+# fast build rule for target.
+program_seq_O3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/build
+.PHONY : program_seq_O3/fast
+
+#=============================================================================
+# Target rules for targets named generate_measures
+
+# Build rule for target.
+generate_measures: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_measures
+.PHONY : generate_measures
+
+# fast build rule for target.
+generate_measures/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measures.dir/build.make CMakeFiles/generate_measures.dir/build
+.PHONY : generate_measures/fast
+
+#=============================================================================
+# Target rules for targets named programOn_O1
+
+# Build rule for target.
+programOn_O1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 programOn_O1
+.PHONY : programOn_O1
+
+# fast build rule for target.
+programOn_O1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/build
+.PHONY : programOn_O1/fast
+
+#=============================================================================
+# Target rules for targets named docs
+
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
+
+# fast build rule for target.
+docs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
+.PHONY : docs/fast
+
+#=============================================================================
+# Target rules for targets named program_seq_O0
+
+# Build rule for target.
+program_seq_O0: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program_seq_O0
+.PHONY : program_seq_O0
+
+# fast build rule for target.
+program_seq_O0/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/build
+.PHONY : program_seq_O0/fast
 
 #=============================================================================
 # Target rules for targets named program_O3
@@ -274,11 +391,18 @@ src/countingsort.o: src/countingsort.c.o
 
 # target to build an object file
 src/countingsort.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/countingsort.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/countingsort.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/countingsort.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/countingsort.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/countingsort.c.o
 .PHONY : src/countingsort.c.o
@@ -288,11 +412,18 @@ src/countingsort.i: src/countingsort.c.i
 
 # target to preprocess a source file
 src/countingsort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/countingsort.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/countingsort.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/countingsort.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/countingsort.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/countingsort.c.i
 .PHONY : src/countingsort.c.i
@@ -302,11 +433,18 @@ src/countingsort.s: src/countingsort.c.s
 
 # target to generate assembly for a file
 src/countingsort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/countingsort.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/countingsort.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/countingsort.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/countingsort.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/countingsort.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/countingsort.c.s
 .PHONY : src/countingsort.c.s
@@ -316,11 +454,11 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/main.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/main.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/main.c.o
 .PHONY : src/main.c.o
@@ -330,11 +468,11 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/main.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/main.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/main.c.i
 .PHONY : src/main.c.i
@@ -344,14 +482,56 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O2.dir/build.make CMakeFiles/program_seq_O2.dir/src/main.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O2.dir/build.make CMakeFiles/program_O2.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O1.dir/build.make CMakeFiles/program_seq_O1.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O3.dir/build.make CMakeFiles/program_seq_O3.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_seq_O0.dir/build.make CMakeFiles/program_seq_O0.dir/src/main.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O3.dir/build.make CMakeFiles/program_O3.dir/src/main.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program_O1.dir/build.make CMakeFiles/program_O1.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/mainOn.o: src/mainOn.c.o
+.PHONY : src/mainOn.o
+
+# target to build an object file
+src/mainOn.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/mainOn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/mainOn.c.o
+.PHONY : src/mainOn.c.o
+
+src/mainOn.i: src/mainOn.c.i
+.PHONY : src/mainOn.i
+
+# target to preprocess a source file
+src/mainOn.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/mainOn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/mainOn.c.i
+.PHONY : src/mainOn.c.i
+
+src/mainOn.s: src/mainOn.c.s
+.PHONY : src/mainOn.s
+
+# target to generate assembly for a file
+src/mainOn.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O3.dir/build.make CMakeFiles/programOn_seq_O3.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O2.dir/build.make CMakeFiles/programOn_seq_O2.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O0.dir/build.make CMakeFiles/programOn_seq_O0.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O3.dir/build.make CMakeFiles/programOn_O3.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O2.dir/build.make CMakeFiles/programOn_O2.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_seq_O1.dir/build.make CMakeFiles/programOn_seq_O1.dir/src/mainOn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/programOn_O1.dir/build.make CMakeFiles/programOn_O1.dir/src/mainOn.c.s
+.PHONY : src/mainOn.c.s
 
 # Help Target
 help:
@@ -364,8 +544,17 @@ help:
 	@echo "... test"
 	@echo "... docs"
 	@echo "... extract_measures"
+	@echo "... extract_measuresOn"
 	@echo "... generate_measures"
+	@echo "... generate_measuresOn"
 	@echo "... install_pipenv"
+	@echo "... programOn_O1"
+	@echo "... programOn_O2"
+	@echo "... programOn_O3"
+	@echo "... programOn_seq_O0"
+	@echo "... programOn_seq_O1"
+	@echo "... programOn_seq_O2"
+	@echo "... programOn_seq_O3"
 	@echo "... program_O1"
 	@echo "... program_O2"
 	@echo "... program_O3"
@@ -379,6 +568,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mainOn.o"
+	@echo "... src/mainOn.i"
+	@echo "... src/mainOn.s"
 .PHONY : help
 
 
