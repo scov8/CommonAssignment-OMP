@@ -13,11 +13,8 @@
  * This file is part of CommonAssignment1.
  *
  * Requirements: Parallelize and Evaluate Performances of "COUNTING SORT" Algorithm ,by using OpenMP.
- * 
- * The previous year's group 02 files proposed by the professor during the course were used for file generation and extraction.
  *  
- * The counting sort function was taken here:
- * https://github.com/ianliu/programacao-paralela/blob/master/omp-count-sort/main.c
+ * The previous year's group 02 files proposed by the professor during the course were used for file generation and extraction.
  *
  * CommonAssignment1 is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,6 +28,9 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with CommonAssignment1.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * You can find the complete project on GitHub:
+ * https://github.com/scov8/CommonAssignment-Team02
  */
 /**
 	@file main.c
