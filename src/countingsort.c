@@ -107,7 +107,7 @@ void countSort(ELEMENT_TYPE a[], int n, int threads)
  * @param length     size of input array (A).
  * @param threads    number of threads.
  */
-void countSortOn(int A[], int C[], int length, int threads)
+void countSortOn(ELEMENT_TYPE A[], ELEMENT_TYPE C[], int length, int threads)
 {
     int max = A[0];
     int min = A[0];
