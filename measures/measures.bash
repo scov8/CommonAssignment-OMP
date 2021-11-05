@@ -38,7 +38,8 @@
 TIME_STAMP=$(date +%s)
 NMEASURES=50
 
-ARRAY_RC=(50000000 100000000 150000000 200000000)
+ARRAY_RC=(50000)
+ARRAY_RCOn=(50000000)
 ARRAY_THS=(0 1 2 4 8 16 32)
 TIMEFORMAT='%3U;%3E;%3S;%P'
 ARRAY_OPT=(0 1 2 3)
@@ -47,30 +48,8 @@ trap "exit" INT
 
 SCRIPTPATH=$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )
 
-#-p for ref
-if [[ $1 == "-p" ]]; then
-	for size in "${ARRAY_RC[@]}"; do
-		for opt in "${ARRAY_OPT[@]}"; do
-			ths_str=$(printf "%02d" $ths)
-			if [[ $opt -eq 0 ]]; then
-				continue;
-			else
-				OUT_FILE=$SCRIPTPATH/measure/SIZE-$size-O$opt/SIZE-$size-NTH-00-O$opt.csv
-			fi
-			OUT_LINK=$SCRIPTPATH/measure/SIZE-$size-O$opt/SIZE-$size-NTH-00-O0.csv
-			OUT_FILE_LINK=$SCRIPTPATH/measure/SIZE-$size/SIZE-$size-NTH-00-O0.csv
-
-			if [[ -f "$OUT_FILE.old" ]]; then
-				rm $OUT_LINK
-				mv $OUT_FILE.old $OUT_FILE
-			else
-				ln -srf $OUT_FILE_LINK $OUT_LINK
-				mv $OUT_FILE $OUT_FILE.old
-			fi
-		done
-	done
-elif [[ $1 == "-k" ]]; then
-	for size in "${ARRAY_RC[@]}"; do
+if [[ $2 == "-k" ]]; then
+	for size in "${ARRAY_RCOn[@]}"; do
 		for ths in "${ARRAY_THS[@]}"; do
 			for opt in "${ARRAY_OPT[@]}"; do
 				ths_str=$(printf "%02d" $ths)

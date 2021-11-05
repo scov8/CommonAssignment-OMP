@@ -169,8 +169,8 @@ add_custom_target(
 
 add_custom_target(
 	 generate_measuresOn
-	 COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash -k ${CMAKE_CURRENT_BINARY_DIR}
-    COMMENT "Generating measures [${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash -k ${CMAKE_CURRENT_BINARY_DIR}]"
+	 COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash ${CMAKE_CURRENT_BINARY_DIR} -k
+    COMMENT "Generating measures [${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash ${CMAKE_CURRENT_BINARY_DIR} -k]"
     DEPENDS	
 		programOn_O1
 		programOn_O2

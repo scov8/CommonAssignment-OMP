@@ -241,13 +241,13 @@ CMakeFiles/programOn_seq_O0.dir/clean:
 # Target rules for target CMakeFiles/generate_measuresOn.dir
 
 # All Build rule for target.
+CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_O1.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_seq_O3.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_seq_O2.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_seq_O0.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_O3.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_O2.dir/all
 CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_seq_O1.dir/all
-CMakeFiles/generate_measuresOn.dir/all: CMakeFiles/programOn_O1.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measuresOn.dir/build.make CMakeFiles/generate_measuresOn.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measuresOn.dir/build.make CMakeFiles/generate_measuresOn.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=5 "Built target generate_measuresOn"
@@ -481,13 +481,13 @@ CMakeFiles/program_seq_O3.dir/clean:
 # Target rules for target CMakeFiles/generate_measures.dir
 
 # All Build rule for target.
-CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O2.dir/all
-CMakeFiles/generate_measures.dir/all: CMakeFiles/program_O2.dir/all
-CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O1.dir/all
 CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O3.dir/all
 CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O0.dir/all
 CMakeFiles/generate_measures.dir/all: CMakeFiles/program_O3.dir/all
 CMakeFiles/generate_measures.dir/all: CMakeFiles/program_O1.dir/all
+CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O2.dir/all
+CMakeFiles/generate_measures.dir/all: CMakeFiles/program_O2.dir/all
+CMakeFiles/generate_measures.dir/all: CMakeFiles/program_seq_O1.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measures.dir/build.make CMakeFiles/generate_measures.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_measures.dir/build.make CMakeFiles/generate_measures.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=4 "Built target generate_measures"

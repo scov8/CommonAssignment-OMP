@@ -73,8 +73,8 @@ CMakeFiles/generate_measuresOn: programOn_seq_O0
 CMakeFiles/generate_measuresOn: programOn_seq_O1
 CMakeFiles/generate_measuresOn: programOn_seq_O2
 CMakeFiles/generate_measuresOn: programOn_seq_O3
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating measures [/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/measures/measures.bash -k /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid]"
-	../measures/measures.bash -k /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating measures [/Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid -k]"
+	../measures/measures.bash /Users/luigiscovotto/Desktop/proveMidterm/HPC/CommonAssignment-Team02/buid -k
 
 generate_measuresOn: CMakeFiles/generate_measuresOn
 generate_measuresOn: CMakeFiles/generate_measuresOn.dir/build.make
